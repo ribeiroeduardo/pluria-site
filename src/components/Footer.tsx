@@ -49,7 +49,7 @@ const Footer = () => {
             &copy; {currentYear} Pluria Custom Guitars. All rights reserved.
           </p>
           <p className="text-white/70 text-sm mt-2 md:mt-0">
-            Handcrafted with passion in Portland, Oregon
+            Made with love in São Paulo, Brazil
           </p>
         </div>
       </div>
