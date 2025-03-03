@@ -7,35 +7,33 @@ import { ArrowRight } from 'lucide-react';
 const CallToAction = () => {
   return (
     <Section className="bg-black text-white relative overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute inset-0 -z-10 opacity-10 bg-subtle-texture" />
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-white/10 blur-3xl -z-10" />
-      <div className="absolute bottom-0 left-0 w-1/4 h-1/2 bg-white/10 blur-3xl -z-10" />
+      {/* Decorative elements - simplified */}
+      <div className="absolute inset-0 -z-10 opacity-5 bg-subtle-texture" />
       
-      <div className="max-w-4xl mx-auto text-center animate-fade-in">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium mb-6 text-balance">
-          Ready to Create Your Dream Guitar?
+      <div className="max-w-3xl mx-auto text-center animate-fade-in py-16 md:py-20">
+        <h2 className="text-3xl md:text-4xl font-medium mb-10 text-balance tracking-wide">
+          READY TO CREATE YOUR DREAM GUITAR
         </h2>
         
-        <p className="text-lg md:text-xl text-white mb-8 max-w-2xl mx-auto text-balance">
+        <p className="text-lg text-white mb-12 max-w-2xl mx-auto text-balance">
           Start your journey to owning a custom-built instrument that's perfectly matched 
-          to your playing style, sound preferences, and aesthetic vision.
+          to your playing style and aesthetic vision.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-6 justify-center">
           <Button
-            className="bg-white text-black hover:bg-white/90 px-6 py-6 text-base rounded-none group"
+            className="bg-white text-black hover:bg-white/90 px-8 py-6 text-sm rounded-none uppercase tracking-wider group"
             size="lg"
           >
-            Start Your Custom Design
+            Start Custom Design
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Button>
           <Button
             variant="outline"
-            className="border-white/40 text-white hover:bg-white/10 hover:border-white/60"
+            className="border-white/40 text-white hover:bg-white/10 hover:border-white px-8 py-6 rounded-none uppercase tracking-wider text-sm"
             size="lg"
           >
-            Schedule a Consultation
+            Schedule Consultation
           </Button>
         </div>
       </div>

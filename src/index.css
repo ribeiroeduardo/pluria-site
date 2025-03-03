@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Roboto+Mono&family=Montserrat:wght@300;400;500;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Roboto+Mono&family=Montserrat:wght@200;300;400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -22,7 +23,7 @@
     --secondary-foreground: 0 0% 100%;
 
     --muted: 0 0% 8%;
-    --muted-foreground: 0 0% 80%;
+    --muted-foreground: 0 0% 85%;
 
     --accent: 0 0% 100%;
     --accent-foreground: 0 0% 0%;
@@ -30,8 +31,8 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 15%;
-    --input: 0 0% 15%;
+    --border: 0 0% 25%;
+    --input: 0 0% 25%;
     --ring: 0 0% 80%;
 
     --radius: 0;
@@ -102,6 +103,7 @@
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif font-medium tracking-wider uppercase;
+    letter-spacing: 0.05em;
   }
 
   h1 {
@@ -116,6 +118,10 @@
     @apply text-2xl md:text-3xl leading-snug;
   }
 
+  p {
+    @apply leading-relaxed;
+  }
+
   .font-outline {
     -webkit-text-stroke: 1px hsl(var(--foreground));
     color: transparent;
@@ -128,7 +134,7 @@
   }
 
   .glass-panel {
-    @apply bg-card border border-border shadow-subtle;
+    @apply bg-background/80 border border-border shadow-subtle backdrop-blur-sm;
   }
 
   .glass-button {
@@ -138,7 +144,7 @@
 
   .hover-lift {
     @apply transition-all duration-300 ease-out-expo;
-    @apply hover:translate-y-[-5px] hover:shadow-smooth;
+    @apply hover:translate-y-[-5px];
   }
   
   .section-padding {
@@ -146,11 +152,11 @@
   }
 
   .section-title {
-    @apply mb-8 md:mb-12;
+    @apply mb-12 md:mb-16;
   }
 
   .section-subtitle {
-    @apply text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 md:mb-12 font-light tracking-wider;
+    @apply text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-12 md:mb-16 font-light tracking-wider;
   }
 
   .tag {

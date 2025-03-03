@@ -33,31 +33,31 @@ const Header = () => {
     <header 
       className={cn(
         'fixed top-0 left-0 right-0 z-50 py-6 transition-all duration-300',
-        isScrolled ? 'bg-background/95 backdrop-blur-sm shadow-sm' : 'bg-transparent'
+        isScrolled ? 'bg-background/95 backdrop-blur-sm border-b border-white/10' : 'bg-transparent'
       )}
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between">
-          <a href="#" className="text-2xl font-serif font-medium tracking-widest uppercase z-10">
-            Pluria
+          <a href="#" className="text-2xl font-serif tracking-widest uppercase z-10">
+            PLURIA
           </a>
           
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-12">
             {navLinks.map((link) => (
               <a 
                 key={link.href} 
                 href={link.href}
-                className="text-xs font-medium tracking-widest uppercase transition-colors hover:text-white"
+                className="text-xs font-light tracking-widest uppercase transition-colors hover:text-white"
               >
                 {link.label}
               </a>
             ))}
             <Button 
-              className="bg-transparent hover:bg-white/10 text-white border border-white/40 uppercase tracking-widest text-xs rounded-none px-6" 
+              className="bg-transparent hover:bg-white/5 text-white border border-white/30 hover:border-white uppercase tracking-widest text-xs rounded-none px-6" 
               size="sm"
             >
-              Contact
+              CONTACT
             </Button>
           </nav>
 
@@ -79,22 +79,22 @@ const Header = () => {
           isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full'
         )}
       >
-        <div className="container h-full flex flex-col justify-center items-center space-y-8 p-4">
+        <div className="container h-full flex flex-col justify-center items-center space-y-10 p-4">
           {navLinks.map((link) => (
             <a 
               key={link.href} 
               href={link.href}
-              className="text-base font-medium tracking-widest uppercase transition-colors hover:text-white"
+              className="text-sm font-light tracking-widest uppercase transition-colors hover:text-white"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {link.label}
             </a>
           ))}
           <Button 
-            className="mt-4 bg-transparent hover:bg-white/10 text-white border border-white/40 uppercase tracking-widest text-xs rounded-none px-6" 
+            className="mt-4 bg-transparent hover:bg-white/5 text-white border border-white/30 hover:border-white uppercase tracking-widest text-xs rounded-none px-8 py-6" 
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            Contact
+            CONTACT
           </Button>
         </div>
       </div>
