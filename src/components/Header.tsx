@@ -22,23 +22,23 @@ const Header = () => {
   };
 
   const navLinks = [
-    { href: '#features', label: 'Features' },
-    { href: '#process', label: 'Process' },
-    { href: '#testimonials', label: 'Testimonials' },
-    { href: '#portfolio', label: 'Portfolio' },
-    { href: '#about', label: 'About' },
+    { href: '#features', label: 'FEATURES' },
+    { href: '#process', label: 'PROCESS' },
+    { href: '#testimonials', label: 'TESTIMONIALS' },
+    { href: '#portfolio', label: 'PORTFOLIO' },
+    { href: '#about', label: 'ABOUT' },
   ];
 
   return (
     <header 
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 py-4 transition-all duration-300',
-        isScrolled ? 'bg-white/80 dark:bg-pluria-950/80 backdrop-blur-lg shadow-sm' : 'bg-transparent'
+        'fixed top-0 left-0 right-0 z-50 py-6 transition-all duration-300',
+        isScrolled ? 'bg-background/95 backdrop-blur-sm' : 'bg-transparent'
       )}
     >
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-6">
         <div className="flex items-center justify-between">
-          <a href="#" className="text-2xl font-serif font-bold tracking-tight z-10">
+          <a href="#" className="text-2xl font-serif font-medium tracking-widest uppercase z-10">
             Pluria
           </a>
           
@@ -48,13 +48,16 @@ const Header = () => {
               <a 
                 key={link.href} 
                 href={link.href}
-                className="text-sm font-medium transition-colors hover:text-accent relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-accent after:transition-all hover:after:w-full"
+                className="text-xs font-medium tracking-widest uppercase transition-colors hover:text-accent/80"
               >
                 {link.label}
               </a>
             ))}
-            <Button className="bg-primary hover:bg-primary/90 text-white" size="sm">
-              Contact Us
+            <Button 
+              className="bg-transparent hover:bg-accent/10 text-foreground border border-accent/30 uppercase tracking-widest text-xs rounded-none px-6" 
+              size="sm"
+            >
+              Contact
             </Button>
           </nav>
 
@@ -72,7 +75,7 @@ const Header = () => {
       {/* Mobile Navigation */}
       <div 
         className={cn(
-          'fixed inset-0 bg-white dark:bg-pluria-950 z-0 transition-transform duration-300 ease-out-expo md:hidden',
+          'fixed inset-0 bg-background z-0 transition-transform duration-300 ease-out-expo md:hidden',
           isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full'
         )}
       >
@@ -81,17 +84,17 @@ const Header = () => {
             <a 
               key={link.href} 
               href={link.href}
-              className="text-xl font-medium transition-colors hover:text-accent"
+              className="text-base font-medium tracking-widest uppercase transition-colors hover:text-accent/80"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {link.label}
             </a>
           ))}
           <Button 
-            className="mt-4 bg-primary hover:bg-primary/90 text-white" 
+            className="mt-4 bg-transparent hover:bg-accent/10 text-foreground border border-accent/30 uppercase tracking-widest text-xs rounded-none px-6" 
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            Contact Us
+            Contact
           </Button>
         </div>
       </div>

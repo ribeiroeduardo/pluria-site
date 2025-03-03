@@ -25,7 +25,7 @@ const Testimonial: React.FC<TestimonialProps> = ({
 }) => {
   return (
     <div className={cn(
-      "glass-panel p-6 rounded-lg hover-lift relative", 
+      "glass-panel p-6 hover-lift relative", 
       delay && `animate-scale-in ${delay}`
     )}>
       <div className="flex space-x-1 mb-4">
@@ -41,7 +41,7 @@ const Testimonial: React.FC<TestimonialProps> = ({
       </div>
       
       {videoUrl ? (
-        <div className="mb-6 aspect-video overflow-hidden rounded-md">
+        <div className="mb-6 aspect-video overflow-hidden">
           <iframe 
             src={videoUrl} 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -51,11 +51,11 @@ const Testimonial: React.FC<TestimonialProps> = ({
           ></iframe>
         </div>
       ) : (
-        <blockquote className="mb-6 text-lg italic">"{quote}"</blockquote>
+        <blockquote className="mb-6 text-base italic font-light">{quote}</blockquote>
       )}
       
       <div className="flex items-center">
-        <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
+        <div className="w-12 h-12 overflow-hidden mr-4">
           <img 
             src={image} 
             alt={author} 
@@ -64,8 +64,8 @@ const Testimonial: React.FC<TestimonialProps> = ({
           />
         </div>
         <div>
-          <p className="font-medium">{author}</p>
-          <p className="text-sm text-muted-foreground">{role}</p>
+          <p className="font-medium uppercase tracking-wider text-sm">{author}</p>
+          <p className="text-xs text-muted-foreground uppercase tracking-wider">{role}</p>
         </div>
       </div>
     </div>
@@ -103,11 +103,11 @@ const Testimonials = () => {
   ];
 
   return (
-    <Section id="testimonials" className="bg-secondary/50">
+    <Section id="testimonials" className="bg-muted/20">
       <div className="text-center section-title animate-fade-in">
-        <span className="tag bg-primary/10 text-primary">Testimonials</span>
-        <h2 className="mt-4 mb-4">What Our Clients Say</h2>
-        <p className="section-subtitle mx-auto">
+        <span className="tag bg-primary/5 text-primary tracking-widest">TESTIMONIALS</span>
+        <h2 className="mt-6 mb-6 text-3xl">WHAT OUR CLIENTS SAY</h2>
+        <p className="section-subtitle mx-auto max-w-2xl">
           Discover why professional musicians and passionate players choose Pluria 
           for their custom guitar needs.
         </p>

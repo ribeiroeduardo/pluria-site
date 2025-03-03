@@ -78,7 +78,7 @@ export default {
 				}
 			},
 			fontFamily: {
-				sans: ['Helvetica Neue', 'sans-serif'],
+				sans: ['Montserrat', 'Helvetica Neue', 'sans-serif'],
 				serif: ['Playfair Display', 'serif'],
 				mono: ['Roboto Mono', 'monospace'],
 			},
@@ -158,8 +158,12 @@ export default {
 			},
 			boxShadow: {
 				'subtle': '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
-				'smooth': '0 4px 20px rgba(0, 0, 0, 0.08)',
-				'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.07)',
+				'smooth': '0 4px 20px rgba(0, 0, 0, 0.15)',
+				'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.15)',
+			},
+			letterSpacing: {
+				'wider': '0.1em',
+				'widest': '0.2em',
 			},
 		}
 	},
