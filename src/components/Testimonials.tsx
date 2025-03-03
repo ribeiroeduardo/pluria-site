@@ -2,7 +2,7 @@
 import React from 'react';
 import Section from '@/components/ui/Section';
 import { cn } from '@/lib/utils';
-import { Star } from 'lucide-react';
+import { Star, Play } from 'lucide-react';
 
 interface TestimonialProps {
   quote: string;
@@ -11,6 +11,7 @@ interface TestimonialProps {
   image: string;
   rating: number;
   delay?: string;
+  videoUrl?: string;
 }
 
 const Testimonial: React.FC<TestimonialProps> = ({ 
@@ -20,6 +21,7 @@ const Testimonial: React.FC<TestimonialProps> = ({
   image,
   rating,
   delay = '',
+  videoUrl
 }) => {
   return (
     <div className={cn(
@@ -38,7 +40,19 @@ const Testimonial: React.FC<TestimonialProps> = ({
         ))}
       </div>
       
-      <blockquote className="mb-6 text-lg italic">"{quote}"</blockquote>
+      {videoUrl ? (
+        <div className="mb-6 aspect-video overflow-hidden rounded-md">
+          <iframe 
+            src={videoUrl} 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowFullScreen
+            className="w-full h-full object-cover"
+            title={`Review by ${author}`}
+          ></iframe>
+        </div>
+      ) : (
+        <blockquote className="mb-6 text-lg italic">"{quote}"</blockquote>
+      )}
       
       <div className="flex items-center">
         <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
@@ -67,6 +81,7 @@ const Testimonials = () => {
       image: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
       rating: 5,
       delay: "animation-delay-100",
+      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" // Replace with actual review video
     },
     {
       quote: "The custom guitar Pluria built for me has become an extension of my musical voice. Worth every penny.",
@@ -75,6 +90,7 @@ const Testimonials = () => {
       image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
       rating: 5,
       delay: "animation-delay-200",
+      videoUrl: "https://www.youtube.com/embed/jNQXAC9IVRw" // Replace with actual review video
     },
     {
       quote: "From design to delivery, the entire process was collaborative and resulted in exactly the instrument I had envisioned.",

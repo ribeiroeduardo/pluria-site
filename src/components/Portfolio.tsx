@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Section from '@/components/ui/Section';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
-import { ChevronLeft, ChevronRight, Info, X } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Info, X, Play } from 'lucide-react';
 
 interface GuitarItem {
   id: number;
@@ -12,6 +12,7 @@ interface GuitarItem {
   details: string;
   image: string;
   category: string;
+  videoUrl?: string;
 }
 
 const Portfolio = () => {
@@ -37,11 +38,12 @@ const Portfolio = () => {
     },
     {
       id: 3,
-      title: "The Solaris",
-      description: "Solid-body electric with custom inlays",
-      details: "Solid alder body with quilted maple top, roasted maple neck, and intricate custom inlays. Features our proprietary pickups for exceptional clarity and sustain.",
-      image: "https://images.unsplash.com/photo-1550985616-10810253b84d?q=80&w=1035&auto=format&fit=crop",
+      title: "The Solaris Performer",
+      description: "Michael Torres playing live with his custom Solaris",
+      details: "Watch professional guitarist Michael Torres performing with his custom Solaris model at the Blue Note Jazz Club. Features our proprietary pickups for exceptional clarity and sustain.",
+      image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1470&auto=format&fit=crop",
       category: "electric",
+      videoUrl: "https://www.youtube.com/embed/6hzrDeceEKc" // Replace with actual client performance video
     },
     {
       id: 4,
@@ -61,11 +63,12 @@ const Portfolio = () => {
     },
     {
       id: 6,
-      title: "The Alpine",
-      description: "Grand auditorium acoustic with alpine spruce",
-      details: "Grand auditorium acoustic guitar featuring rare Alpine spruce top and flamed maple back and sides. Advanced bracing system delivers exceptional responsiveness across all registers.",
-      image: "https://images.unsplash.com/photo-1607228729583-a870cc39d253?q=80&w=1472&auto=format&fit=crop",
+      title: "The Alpine Live Session",
+      description: "Emma Johnson performing with her Alpine acoustic",
+      details: "Watch folk artist Emma Johnson perform an unplugged session with her Grand Auditorium Alpine. Features rare Alpine spruce top and flamed maple back and sides with our advanced bracing system.",
+      image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1470&auto=format&fit=crop",
       category: "acoustic",
+      videoUrl: "https://www.youtube.com/embed/L_LUpnjgPso" // Replace with actual client performance video
     },
   ];
 
@@ -74,10 +77,13 @@ const Portfolio = () => {
     { id: 'electric', label: 'Electric' },
     { id: 'acoustic', label: 'Acoustic' },
     { id: 'classical', label: 'Classical' },
+    { id: 'video', label: 'Performance Videos' },
   ];
 
   const filteredGuitars = activeFilter === 'all' 
     ? guitars 
+    : activeFilter === 'video'
+    ? guitars.filter(guitar => guitar.videoUrl)
     : guitars.filter(guitar => guitar.category === activeFilter);
 
   return (
@@ -118,11 +124,18 @@ const Portfolio = () => {
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               loading="lazy"
             />
+            {guitar.videoUrl && (
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="bg-black/30 rounded-full p-3 backdrop-blur-sm">
+                  <Play className="h-8 w-8 text-white" fill="white" />
+                </div>
+              </div>
+            )}
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 flex flex-col justify-end">
               <h3 className="text-white font-medium text-xl">{guitar.title}</h3>
               <p className="text-white/80 text-sm">{guitar.description}</p>
               <button className="mt-2 text-white/90 text-sm flex items-center">
-                View Details <Info className="ml-1 h-3 w-3" />
+                {guitar.videoUrl ? 'Watch Performance' : 'View Details'} <Info className="ml-1 h-3 w-3" />
               </button>
             </div>
           </div>
@@ -142,13 +155,25 @@ const Portfolio = () => {
             </button>
             
             <div className="grid grid-cols-1 md:grid-cols-2">
-              <div className="relative aspect-square md:aspect-auto">
-                <img 
-                  src={selectedGuitar.image} 
-                  alt={selectedGuitar.title} 
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              {selectedGuitar.videoUrl ? (
+                <div className="relative aspect-video md:aspect-auto">
+                  <iframe 
+                    src={selectedGuitar.videoUrl} 
+                    title={selectedGuitar.title}
+                    className="w-full h-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              ) : (
+                <div className="relative aspect-square md:aspect-auto">
+                  <img 
+                    src={selectedGuitar.image} 
+                    alt={selectedGuitar.title} 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              )}
               
               <div className="p-6 md:p-8 flex flex-col justify-center">
                 <h3 className="text-2xl font-medium mb-2">{selectedGuitar.title}</h3>
