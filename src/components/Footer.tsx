@@ -1,6 +1,7 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { Facebook, Instagram, Twitter, Youtube } from 'lucide-react';
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -61,6 +62,8 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;
