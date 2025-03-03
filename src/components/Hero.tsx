@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative h-[80vh] w-full overflow-hidden">
       {/* Background Video */}
       <video
         autoPlay
@@ -13,7 +13,7 @@ const Hero = () => {
         playsInline
         className="absolute inset-0 h-full w-full object-cover"
       >
-        <source src="/videos/bg-hero.mp4" type="video/mp4" />
+        <source src="/bg-hero.mp4" type="video/mp4" />
       </video>
 
       {/* Overlay */}

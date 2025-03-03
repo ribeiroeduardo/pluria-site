@@ -4,6 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .text-muted-foreground {
+    color: hsl(var(--muted-foreground));
+  }
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -93,6 +99,10 @@
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+
+  h1, h2, h3 {
+    @apply font-plus-jakarta;
+  }
 }
 
 @layer base {
@@ -101,12 +111,12 @@
   }
 
   html, body {
-    @apply selection:bg-accent/20 scroll-smooth;
+    @apply scroll-smooth;
   }
 
   body {
     @apply bg-background text-foreground;
-    @apply transition-colors duration-300 ease-out-expo;
+    @apply transition-colors duration-300 ease-[cubic-bezier(0.19,1,0.22,1)];
     margin: 0;
     min-width: 320px;
     min-height: 100vh;
@@ -154,16 +164,16 @@
   }
 
   .glass-panel {
-    @apply bg-background/80 border border-border shadow-subtle backdrop-blur-sm;
+    @apply bg-background/80 border border-border shadow backdrop-blur-sm;
   }
 
   .glass-button {
-    @apply transition-all duration-300 ease-out-expo relative overflow-hidden bg-background border border-border shadow-subtle rounded-none backdrop-blur-sm;
+    @apply transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)] relative overflow-hidden bg-background border border-border shadow rounded-none backdrop-blur-sm;
     @apply hover:border-muted hover:shadow-smooth;
   }
 
   .hover-lift {
-    @apply transition-all duration-300 ease-out-expo;
+    @apply transition-all duration-300 ease-[cubic-bezier(0.19,1,0.22,1)];
     @apply hover:translate-y-[-5px];
   }
   
@@ -368,4 +378,10 @@
 /* Transitions */
 .page-transition {
   transition: opacity 0.2s ease;
+}
+
+@layer utilities {
+  ::selection {
+    @apply bg-accent/20;
+  }
 }

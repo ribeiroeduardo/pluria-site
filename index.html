@@ -3,16 +3,322 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pluria-guitar-journey</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
-    <meta property="og:image" content="/og-image.png" />
+    <title>Pluria Guitars - Custom Guitars for Collectors and Artists</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   </head>
 
   <body>
-    <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <a href="#" class="logo">
+            <img src="public/logo-pluria-white.svg" alt="Pluria Guitars">
+          </a>
+          <nav class="main-nav">
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <ul class="nav-list">
+              <li><a href="#values">Values</a></li>
+              <li><a href="#how-it-works">How It Works</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#videos">Videos</a></li>
+              <li><a href="#models">Models</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <video autoplay muted loop playsinline id="bgVideo">
+        <source src="public/bg-hero.mp4" type="video/mp4">
+      </video>
+      <div class="hero-content">
+        <h1>Custom guitars for collectors and artists</h1>
+        <!--<p>Handcrafted instruments with exceptional quality and unique designs</p>-->
+      </div>
+    </section>
+
+    <section id="values" class="values section">
+      <div class="container">
+        <h2 class="section-title">Values</h2>
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-image">
+              <img src="public/images/compressed/value-01.jpg" alt="Craftsmanship Excellence">
+            </div>
+            <div class="value-content">
+              <h3>Craftsmanship Excellence</h3>
+              <p>Craftsmanship is more than just a process – it's our passion. Building guitars that not only look beautiful and sound exceptional, but also feel amazing to play.</p>
+            </div>
+          </div>
+          <div class="value-card">
+            <div class="value-image">
+              <img src="public/images/compressed/value-02.jpg" alt="Exceptionally Unique">
+            </div>
+            <div class="value-content">
+              <h3>Exceptionally Unique</h3>
+              <p>With our Online Builder, you have dozens of possible combinations of woods, parts and finishes. We help you design and build a guitar that's exceptionally unique.</p>
+            </div>
+          </div>
+          <div class="value-card">
+            <div class="value-image">
+              <img src="public/images/compressed/value-03.jpg" alt="Finest Materials">
+            </div>
+            <div class="value-content">
+              <h3>Finest Materials</h3>
+              <p>From the hand-selected tonewoods to the best parts, every single component available in the Online Builder is chosen for its quality and durability.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works section">
+      <div class="container">
+        <h2 class="section-title">How It Works</h2>
+        <div class="steps-container">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>Design</h3>
+              <p>Use our Online Builder to explore customization options and select features that match your preferences. Create your unique instrument design with ease.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>Order Submission</h3>
+              <p>After all specifications are decided, save your Design and submit your order. Our team will carefully review your order to ensure everything is accurate. We'll contact you promptly if any clarifications are needed.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>Construction</h3>
+              <p>Once your order is confirmed, the construction of your instrument will begin. Throughout the build process and upon completion, we conduct thorough inspections to ensure your instrument meets our high standards.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h3>Shipping</h3>
+              <p>You'll receive an email notification once your instrument is ready to ship. If you paid a deposit, the remaining balance will need to be settled before we dispatch your order.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery section">
+      <div class="container">
+        <h2 class="section-title">Gallery</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="public/images/gallery/3ec26cd0.jpg" alt="Pluria Guitar">
+          </div>
+          <div class="gallery-item">
+            <img src="public/images/gallery/9d6f8818.jpg" alt="Pluria Guitar">
+          </div>
+          <div class="gallery-item">
+            <img src="public/images/gallery/73f4b739.jpg" alt="Pluria Guitar">
+          </div>
+          <div class="gallery-item">
+            <img src="public/images/gallery/a9b387ac.jpg" alt="Pluria Guitar">
+          </div>
+          <div class="gallery-item">
+            <img src="public/images/gallery/55fa4a14.jpg" alt="Pluria Guitar">
+          </div>
+          <div class="gallery-item">
+            <img src="public/images/gallery/681870be.jpg" alt="Pluria Guitar">
+          </div>
+          <div class="gallery-item">
+            <img src="public/images/gallery/b54bb08c.jpg" alt="Pluria Guitar">
+          </div>
+          <div class="gallery-item">
+            <img src="public/images/gallery/00df9106.jpg" alt="Pluria Guitar">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="videos" class="videos section">
+      <div class="container">
+        <h2 class="section-title">Videos</h2>
+        <div class="videos-grid">
+          <div class="video-item">
+            <div class="video-wrapper">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/bDv0xDaUBPk" title="Warleyson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <h3>Warleyson</h3>
+          </div>
+          <div class="video-item">
+            <div class="video-wrapper">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/Gw931_Fsr5k" title="Leo P" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <h3>Leo P</h3>
+          </div>
+          <div class="video-item">
+            <div class="video-wrapper">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/CdR2il3Ueec" title="TJ Review" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <h3>TJ Review</h3>
+          </div>
+          <div class="video-item">
+            <div class="video-wrapper">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/n926I4uSxpQ" title="TTB Review" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <h3>TTB Review</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="models" class="models section">
+      <div class="container">
+        <h2 class="section-title">Models</h2>
+        <div class="models-grid">
+          <div class="model-card">
+            <div class="model-image">
+              <img src="public/images/model_omni.jpg" alt="Omni Model">
+            </div>
+            <div class="model-content">
+              <h3>Omni</h3>
+              <p>Our flagship model with versatile tones and exceptional playability.</p>
+              <a href="#" class="cta-button">Design Your Omni</a>
+            </div>
+          </div>
+          <div class="model-card">
+            <div class="model-image">
+              <img src="public/images/model_nemesis.jpg" alt="Nemesis Model">
+            </div>
+            <div class="model-content">
+              <h3>Nemesis</h3>
+              <p>Bold design with aggressive tones for the modern player.</p>
+              <span class="coming-soon">Coming Soon</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about section">
+      <div class="container">
+        <h2 class="section-title">About</h2>
+        <div class="about-content">
+          <div class="about-image">
+            <img src="public/images/IMG_6368.jpg" alt="Founder with guitar">
+          </div>
+          <div class="about-text">
+            <p>At Pluria, we craft guitars that are both beautiful and functional. Our exceptional instruments feature original designs, exotic woods, and diverse finishes, giving each guitar a unique personality. These aren't just standout pieces for collectors—they're playable works of art.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact section">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="submit-button">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="faq" class="faq section">
+      <div class="container">
+        <h2 class="section-title">FAQ</h2>
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>How long does it take to build a custom guitar?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>The build time for a custom guitar typically ranges from 3-6 months, depending on the complexity of the design and our current production schedule.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Do you ship internationally?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Yes, we ship worldwide. International shipping costs and any applicable customs fees will be calculated at checkout.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Can I request custom inlays or artwork?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Absolutely! Custom inlays and artwork are available. Please contact us directly to discuss your specific requirements.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>What payment methods do you accept?</h3>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>We accept credit cards, PayPal, and bank transfers. For custom builds, we typically require a 50% deposit to begin work, with the remaining balance due before shipping.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="public/logo-pluria-white.svg" alt="Pluria Guitars">
+          </div>
+          <div class="footer-links">
+            <ul>
+              <li><a href="#values">Values</a></li>
+              <li><a href="#how-it-works">How It Works</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#videos">Videos</a></li>
+              <li><a href="#models">Models</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 Pluria Guitars. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/cf0cf4387e.js" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

@@ -1,0 +1,21 @@
+/* 
+ * Main CSS File
+ * Imports all CSS files in the correct order
+ */
+
+/* Base styles */
+@import 'reset.css';
+@import 'tokens.css';
+@import 'typography.css';
+@import 'utilities.css';
+
+/* Components */
+@import 'components/buttons.css';
+@import 'components/header.css';
+@import 'components/hero.css';
+@import 'components/sections.css';
+@import 'components/contact.css';
+@import 'components/footer.css';
+
+/* Custom styles */
+@import 'custom.css'; 

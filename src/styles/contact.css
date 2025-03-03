@@ -1,0 +1,38 @@
+/* Form container */
+.contact-form {
+    /* Replace flat gray with subtle gradient for depth */
+    background: linear-gradient(145deg, #2a2a2a, #363636);
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+/* Input fields */
+.form-input {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+}
+
+/* Input focus state */
+.form-input:focus {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: #4A90E2; /* Accent blue for focus */
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+/* Submit button */
+.send-message-btn {
+    background: #4A90E2;
+    color: white;
+    transition: background-color 0.2s ease;
+}
+
+.send-message-btn:hover {
+    background: #357ABD;
+}
+
+/* Labels */
+.form-label {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+} 
