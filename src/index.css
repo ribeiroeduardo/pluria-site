@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Roboto+Mono&family=Montserrat:wght@200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,33 +6,30 @@
 
 @layer base {
   :root {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
 
-    --card: 0 0% 3%;
-    --card-foreground: 0 0% 100%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
 
-    --popover: 0 0% 3%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
 
-    --primary: 0 0% 100%;
-    --primary-foreground: 0 0% 0%;
+    --primary: 0 0% 0%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 8%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 0%;
 
-    --muted: 0 0% 8%;
-    --muted-foreground: 0 0% 85%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 0 0% 100%;
+    --accent: 0 0% 96%;
     --accent-foreground: 0 0% 0%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 0 0% 25%;
-    --input: 0 0% 25%;
-    --ring: 0 0% 80%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 0% 0%;
 
     --radius: 0;
 
@@ -45,36 +41,48 @@
     --sidebar-accent-foreground: 0 0% 100%;
     --sidebar-border: 0 0% 15%;
     --sidebar-ring: 0 0% 90%;
+
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: -0.011em;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+
+    /* Default transition for theme changes */
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   .dark {
-    --background: 240 10% 4%;
+    --background: 0 0% 7%;
     --foreground: 0 0% 100%;
 
-    --card: 240 10% 4%;
+    --card: 0 0% 7%;
     --card-foreground: 0 0% 100%;
 
-    --popover: 240 10% 4%;
+    --popover: 0 0% 7%;
     --popover-foreground: 0 0% 100%;
 
     --primary: 0 0% 100%;
-    --primary-foreground: 240 10% 4%;
+    --primary-foreground: 0 0% 7%;
 
-    --secondary: 240 4% 10%;
+    --secondary: 0 0% 12%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 240 4% 10%;
-    --muted-foreground: 240 5% 80%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 63%;
 
-    --accent: 243 75% 59%;
+    --accent: 0 0% 12%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 240 4% 18%;
-    --input: 240 4% 18%;
-    --ring: 240 5% 90%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 0 0% 100%;
     
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 100%;
@@ -97,25 +105,37 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground;
     @apply transition-colors duration-300 ease-out-expo;
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    background-color: var(--background);
+    color: var(--foreground);
   }
 
+  /* Architecture-specific typography */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif font-medium tracking-wider uppercase;
-    letter-spacing: 0.05em;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.022em;
+    line-height: 1.2;
   }
 
   h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl leading-tight;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
   }
 
   h2 {
-    @apply text-3xl md:text-4xl lg:text-5xl leading-tight;
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
   }
 
   h3 {
-    @apply text-2xl md:text-3xl leading-snug;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
 
   p {
@@ -148,7 +168,7 @@
   }
   
   .section-padding {
-    @apply py-16 md:py-24 lg:py-32;
+    padding: 4rem 0;
   }
 
   .section-title {
@@ -231,4 +251,121 @@
 
 .animation-delay-1000 {
   animation-delay: 1000ms;
+}
+
+/* Theme toggle button styles */
+.theme-toggle {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  color: var(--foreground);
+  opacity: 0.5;
+  transition: opacity 0.2s ease;
+  z-index: 1000;
+}
+
+.theme-toggle:hover {
+  opacity: 1;
+}
+
+/* Architecture studio specific styles */
+.nav-link {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: -0.011em;
+  color: var(--foreground);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.nav-link:hover {
+  opacity: 0.7;
+}
+
+.studio-title {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: -0.022em;
+  margin-bottom: 0.5rem;
+}
+
+.studio-description {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--muted-foreground);
+  max-width: 32rem;
+}
+
+.project-card {
+  background-color: var(--background);
+  transition: opacity 0.2s ease;
+}
+
+.project-card:hover {
+  opacity: 0.9;
+}
+
+.project-title {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: -0.011em;
+  margin: 0.75rem 0 0.25rem;
+}
+
+.project-location {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+/* Layout */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+/* Navigation */
+.main-nav {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+/* Utility classes */
+.text-primary {
+  color: var(--foreground);
+}
+
+.text-secondary {
+  color: var(--foreground);
+}
+
+.bg-surface {
+  background-color: var(--background);
+}
+
+.border-color {
+  border-color: var(--border);
+}
+
+/* Transitions */
+.page-transition {
+  transition: opacity 0.2s ease;
 }
