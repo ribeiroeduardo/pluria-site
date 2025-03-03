@@ -6,15 +6,6 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = [
-    {
-      title: 'Legal',
-      links: [
-        { label: 'Privacy Policy', href: '#' },
-        { label: 'Terms of Service', href: '#' },
-        { label: 'Warranty', href: '#' },
-        { label: 'Shipping Policy', href: '#' },
-      ],
-    },
   ];
 
   const socialLinks = [
